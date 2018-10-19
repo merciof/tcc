@@ -22,10 +22,24 @@ angular.module('listagemLivros').component('listagemLivros', {
           }
     ];
 
+    let idLivro = 4;
+    let autor = 'Tanembaum';
+    let preco = 50;
+    let titulo = 'Java Como Programar';
+
+    
+    function writeUserData(idLivro,autor,preco,titulo){
+      firebase.database().ref('livros' + idLivro).set({
+        autor: autor,
+        preco: preco,
+        titulo: titulo
+      });
+    }
+    
+  
     this.arrayLivros = [];
 
-
-
+    
     // $scope.arrayLivros.push({
     //   titulo: 'Sistemas Distribuidos',
     //   autor: 'Tanenbaum',
@@ -34,7 +48,7 @@ angular.module('listagemLivros').component('listagemLivros', {
 
 
 
-    firebase.database().ref('livros').on('value', function snapshot(s) {
+  /*   firebase.database().ref('livros').on('value', function snapshot(s) {
 
         let arrayLivros = [];
         let livros = s.val();
@@ -46,7 +60,7 @@ angular.module('listagemLivros').component('listagemLivros', {
           obj.preco = livros[key].preco;
           arrayLivros.push(obj);
 
-       }
+       } */
 
 
        this.arrayLivros = arrayLivros.slice();
