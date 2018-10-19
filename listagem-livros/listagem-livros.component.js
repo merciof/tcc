@@ -22,22 +22,20 @@ angular.module('listagemLivros').component('listagemLivros', {
           }
     ];
 
-    let idLivro = 4;
-    let autor = 'Tanembaum';
-    let preco = 50;
-    let titulo = 'Java Como Programar';
+    //obtém referência para o nó 'livros'
+    const ref = firebase.database().ref('livros');
 
+    //método que adiciona um objeto como filho do nó 'livros'
+    const result = ref.push({
+      autor: 'Deitel',
+      preco: '50',
+      titulo: 'Java Como Programar'
+    });
+
+    //loga o objeto retornado pelo método push
+    console.log(result);
     
-    function writeUserData(idLivro,autor,preco,titulo){
-      firebase.database().ref('livros' + idLivro).set({
-        autor: autor,
-        preco: preco,
-        titulo: titulo
-      });
-    }
-    
-  
-    this.arrayLivros = [];
+    //this.arrayLivros = [];
 
     
     // $scope.arrayLivros.push({
