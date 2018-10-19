@@ -60,7 +60,7 @@ angular.module('listagemLivros').component('listagemLivros', {
           obj.preco = livros[key].preco;
           arrayLivros.push(obj);
 
-       } */
+       }
 
 
        this.arrayLivros = arrayLivros.slice();
@@ -69,7 +69,7 @@ angular.module('listagemLivros').component('listagemLivros', {
 
        console.log(this.arrayLivros);
 
-    });
+    });*/
 
     // //este código é executado antes que os dados tenham sido recebidos do servidor
     // this.arrayLivros = arrayLivros.slice();
