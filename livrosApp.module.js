@@ -1,3 +1,6 @@
 angular.module('livrosApp',[
-  'listagemLivros'
+  'listagemLivros',
+  'cadastroLivros',
+  'ngMaterial',
+  'ngMessages'
 ]);

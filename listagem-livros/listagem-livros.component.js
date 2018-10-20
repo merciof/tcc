@@ -22,7 +22,7 @@ angular.module('listagemLivros').component('listagemLivros', {
           }
     ];
 
-    //obtém referência para o nó 'livros'
+    /* //obtém referência para o nó 'livros'
     const ref = firebase.database().ref('livros');
 
     //método que adiciona um objeto como filho do nó 'livros'
@@ -33,7 +33,7 @@ angular.module('listagemLivros').component('listagemLivros', {
     });
 
     //loga o objeto retornado pelo método push
-    console.log(result);
+    console.log(result); */
     
     //this.arrayLivros = [];
 
