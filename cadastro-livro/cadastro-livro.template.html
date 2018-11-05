@@ -4,12 +4,12 @@
       <div>
         
         <md-input-container>
-          <label>Nome</label>
+          <label>Titulo</label>
           <input ng-model="user.nome" type="text">
         </md-input-container>
         
         <md-input-container>
-          <label>Sobrenome</label>
+          <label>Autor</label>
           <input ng-model="user.sobrenome" type="text">
         </md-input-container>
 
@@ -20,7 +20,7 @@
       <div>
         
         <md-input-container>
-          <label>Email</label>
+          <label>Editora</label>
           <input ng-model="user.email" type="email">
         </md-input-container>
 
@@ -47,38 +47,15 @@
   
   
           <md-input-container class="md-block">
-            <label>Rua</label>
+            <label>Ano de Publicação</label>
             <input ng-model="user.rua">
           </md-input-container>
   
           <md-input-container class="md-block">
-            <label>Numero</label>
+            <label>Url da Imagem</label>
             <input ng-model="user.numero">
           </md-input-container>
   
-          <div layout-gt-sm="row">
-            <md-input-container class="md-block" flex-gt-sm>
-              <label>Cidade</label>
-              <input ng-model="user.cidade">
-            </md-input-container>
-  
-            <md-input-container class="md-block" flex-gt-sm>
-              <label>CEP</label>
-              <input name="CEP" ng-model="user.CEP" placeholder="00000000"
-                     required ng-pattern="/^[0-9]{8}$/" md-maxlength="8">
-  
-              <div ng-messages="userForm.postalCode.$error" role="alert" multiple>
-                <div ng-message="required" class="my-message">You must supply a postal code.</div>
-                <div ng-message="pattern" class="my-message">That doesn't look like a valid postal
-                  code.
-                </div>
-                <div ng-message="md-maxlength" class="my-message">
-                  Don't use the long version silly...we don't need to be that specific...
-                </div>
-              </div>
-            </md-input-container>
-          </div>
-
         </form>
       </div>
     </md-content>

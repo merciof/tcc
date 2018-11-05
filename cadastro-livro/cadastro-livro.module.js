@@ -1,1 +1,1 @@
-angular.module('cadastroLivros',[]);
+angular.module('cadastroLivro',[]);

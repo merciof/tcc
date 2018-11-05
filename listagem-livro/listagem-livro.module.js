@@ -1,1 +1,1 @@
-angular.module('listagemLivros',[]);
+angular.module('listagemLivro',[]);

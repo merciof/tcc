@@ -1,5 +1,5 @@
-angular.module('cadastroLivros').component('cadastroLivros',{
-    templateUrl: 'cadastro-livros/cadastro-livros.template.html',
+angular.module('cadastroLivro').component('cadastroLivro',{
+    templateUrl: 'cadastro-livro/cadastro-livro.template.html',
     controller: function cadastroLivrosController($scope) {
 
        

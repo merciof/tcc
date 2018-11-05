@@ -1,6 +1,6 @@
-angular.module('cadastroLivro').component('cadastroLivro',
+angular.module('cadastroUsuario').component('cadastroUsuario',
 {
-    templateUrl: 'cadastro-livro/cadastro-livro.template.html',
+    templateUrl: 'cadastro-usuario/cadastro-usuario.template.html',
     controller: function cadastroUsuarioController($scope) {
 
     }
