@@ -1,6 +1,6 @@
 angular.module('listagemLivro').component('listagemLivro', {
 
-  templateUrl: 'listagem-livro/listagem-livro.template.html',
+  templateUrl: 'components/listagem-livro/listagem-livro.template.html',
 
   controller: function ListagemLivrosController($scope) {
 

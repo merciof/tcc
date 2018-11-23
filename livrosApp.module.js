@@ -3,6 +3,9 @@ angular.module('livrosApp',[
   'cadastroLivro',
   'cadastroUsuario',
   'telaLogin',
+  'homeHeader',
+  'homeFooter',
+  'homeJumbotron',
   'ngMaterial',
   'ngMessages'
 ]);
