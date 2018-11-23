@@ -6,6 +6,7 @@ angular.module('livrosApp',[
   'homeHeader',
   'homeFooter',
   'homeJumbotron',
+  'cardLivro',
   'ngMaterial',
   'ngMessages'
 ]);
