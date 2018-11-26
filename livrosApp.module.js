@@ -1,7 +1,10 @@
-angular.module('livrosApp',['headerHome', 'ngRoute']).config(['$routeProvider', function config($routeProvider) {
+angular.module('livrosApp',['headerHome', 
+'footerHome',
+'ngRoute'])
+.config(['$routeProvider', function config($routeProvider) {
     $routeProvider
     .when('/', {
-      templateUrl: 'components/header-home/header-home.template.html'
+      template: '<header-home></header-home>' + '<footer-home></footerHome>'
     })
     .when('/home', {
       template: '<card-livro></card-livro>'
