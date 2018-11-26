@@ -1,5 +1,6 @@
 angular.module('livrosApp',['headerHome', 
 'footerHome',
+'cardLivro',
 'ngRoute'])
 .config(['$routeProvider', function config($routeProvider) {
     $routeProvider
