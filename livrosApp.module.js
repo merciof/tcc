@@ -6,9 +6,10 @@ angular.module('livrosApp',['headerHome',
 .config(['$routeProvider', function config($routeProvider) {
     $routeProvider
     .when('/', {
-      template: '<header-home></header-home>' + '<footer-home></footerHome>'
+      template: ''
     })
     .when('/home', {
-      template: '<card-livro></card-livro>'
+      template: '<header-home></header-home>' + '<main role="main"><jumbotron-home></jumbotron-home>' 
+                + '<card-livro></card-livro></main>'  + '<footer-home></footer-home>'
     }).otherwise('/')
   }]);
