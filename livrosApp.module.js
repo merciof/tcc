@@ -1,6 +1,7 @@
 angular.module('livrosApp',['headerHome', 
 'footerHome',
 'cardLivro',
+'jumbotronHome',
 'ngRoute'])
 .config(['$routeProvider', function config($routeProvider) {
     $routeProvider
