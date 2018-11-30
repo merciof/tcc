@@ -29,6 +29,41 @@ angular.module('cardLivro').component('cardLivro', {
             "sinopse": "blablabla",
             "autor": "Deitel",
             "estado": "semi novo"
+        }, {
+
+            "nome": "Java Como Programar 5",
+            "edicao": "sexta",
+            "sinopse": "blablabla",
+            "autor": "Deitel",
+            "estado": "semi novo"
+        }, {
+
+            "nome": "Java Como Programar 6",
+            "edicao": "sexta",
+            "sinopse": "blablabla",
+            "autor": "Deitel",
+            "estado": "semi novo"
+        }, {
+
+            "nome": "Java Como Programar 7",
+            "edicao": "sexta",
+            "sinopse": "blablabla",
+            "autor": "Deitel",
+            "estado": "semi novo"
+        }, {
+
+            "nome": "Java Como Programar 8",
+            "edicao": "sexta",
+            "sinopse": "blablabla",
+            "autor": "Deitel",
+            "estado": "semi novo"
+        }, {
+
+            "nome": "Java Como Programar 9",
+            "edicao": "sexta",
+            "sinopse": "blablabla",
+            "autor": "Deitel",
+            "estado": "semi novo"
         }];
     }
 });
