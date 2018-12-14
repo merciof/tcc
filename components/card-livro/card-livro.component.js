@@ -65,5 +65,16 @@ angular.module('cardLivro').component('cardLivro', {
             "autor": "Deitel",
             "estado": "semi novo"
         }];
+    
+        var ref = firebase.database().ref();
+
+        var refAnuncio = ref.child('anuncios');
+
+        refAnuncio.push({
+            nome: "mercio",
+            idade: 29
+        })
+    
+    
     }
 });
