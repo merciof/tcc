@@ -6,7 +6,13 @@ angular.module('telaLogin').component('telaLogin',{
              
             $location.path('/home'); 
             
-            
         } 
+        
+        $scope.goCadastro = function goCadastro() {
+            
+            
+            $location.path('/cadastro');
+        
+        }
     }
 });

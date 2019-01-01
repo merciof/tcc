@@ -10,6 +10,7 @@ angular.module('livrosApp')
       template: '<header-home></header-home>' + '<main role="main"><jumbotron-home></jumbotron-home>' 
                 + '<card-livro></card-livro></main>'  + '<footer-home></footer-home>'
     }).when('/cadastro', {
+      name: 'cadastro',
       template: '<cadastro-usuario></cadastro-usuario>'
     })
     .otherwise('/login')
