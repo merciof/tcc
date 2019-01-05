@@ -18,7 +18,7 @@
   }
   
   .centralizado {
-    margin-left: 25%;
+    margin-left: 33%;
     margin-right: 25%;
     margin-top: 10%;
   }
@@ -31,25 +31,29 @@
       background-color: #f5f5f5;
   }
   
-  
+  .formulario {
+      width: 65%;
+  }
   
 </style>
 
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
 <div class="bootstrap-iso cor-fundo">
+ 
+  
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 col-sm-6 col-xs-12 centralizado">
-        <form method="post">
+        <form method="post" ng-submit="inserirUsuario()" class="formulario">
           <div class="form-group ">
             
             <label class="control-label " for="curso">
              Curso
             </label>
             
-            <select class="select form-control" id="curso" name="curso">
+            <select class="select form-control" id="curso" ng-model="curso" name="curso">
              <option value="Medicina Veterin&aacute;ria">
-              Medicina Veterin&aacute;ria
+              Medicina Veterinária
              </option>
              
              <option value="Ci&ecirc;ncias Biol&oacute;gicas">
@@ -63,37 +67,48 @@
             <label class="control-label " for="periodo-select">
            Per&iacute;odo
             </label>
-            <select class="select form-control" id="periodo-select" name="periodo-select">
+            <select class="select form-control" id="periodo-select" name="periodo-select" ng-model="periodo">
+             
              <option value="1&ordm;">
               1&ordm;
              </option>
+             
              <option value="2&ordm;">
               2&ordm;
              </option>
+             
              <option value="3&ordm;">
               3&ordm;
              </option>
+             
              <option value="4&ordm;">
               4&ordm;
              </option>
+             
              <option value="5&ordm;">
               5&ordm;
              </option>
+             
              <option value="6&ordm;">
               6&ordm;
              </option>
+             
              <option value="7&ordm;">
               7&ordm;
              </option>
+             
              <option value="8&ordm;">
               8&ordm;
              </option>
+             
              <option value="9&ordm;">
               9&ordm;
              </option>
+             
              <option value="Outro">
               Outro
              </option>
+            
             </select>
           </div>
           
@@ -103,15 +118,17 @@
               <span class="asteriskField"> * </span>
             </label>
             
-            <input class="form-control" id="name" name="name" placeholder="Nome" type="text" />
+            <input class="form-control" id="name" name="name" placeholder="Nome" type="text" ng-model="nome"/>
           </div>
           
           <div class="form-group ">
+            
             <label class="control-label requiredField" for="email">
              Email
              <span class="asteriskField"> * </span>
             </label>
-            <input class="form-control" id="email" name="email" placeholder="Email" type="text" />
+            
+            <input class="form-control" id="email" name="email" placeholder="Email" type="text" ng-model="email" />
           </div>
           
           <div class="form-group ">
@@ -119,20 +136,22 @@
              Senha <span class="asteriskField"> * </span>
             </label>
             
-            <input class="form-control" id="name2" name="name2" type="text" />
+            <input class="form-control" id="name2" name="name2" type="text" ng-model="senha"/>
           </div>
           
           <div class="form-group">
             <div>
-              <button class="btn btn-primary btn-lg" name="submit" type="submit">
+              <button class="btn btn-lg btn-dark" name="submit" type="submit">
                 Cadastrar
              </button>
             </div>
           </div>
         
         </form>
-      
-      </div>
+        
+        <h2>
+            {{nome}}, {{email}}, {{senha}}
+      </h2>
     </div>
   </div>
 </div>

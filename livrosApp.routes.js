@@ -7,18 +7,19 @@ angular.module('livrosApp')
       template: '<tela-login></tela-login>'
     })
     
-    // .when('/home', {
-    //   name: 'home',
-    //   template: '<h1>Home Template</h1>' 
-    // })
+    .when('/home', {
+      name: 'home',
+      template: '<header-home></header-home>' + '<main role="main"><jumbotron-home></jumbotron-home>' 
+                + '<card-livro></card-livro></main>'  + '<footer-home></footer-home>' 
+    })
     
     .when('/cadastro-usuario', {
       name: 'cadastro-usuario',
       template: '<cadastro-usuario></cadastro-usuario>'
     })
     
-    .when('/anuncio', {
-      name: 'anuncio',
+    .when('/cadastro-anuncio', {
+      name: 'cadasro-anuncio',
       template: '<cadastro-anuncio></cadastro-anuncio>'
     })
     

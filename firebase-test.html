@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Firebase Teste</h1>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    
+    <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyD_RJeXxSxpw7LXZ5RWK_zUWwGXR7nv3M4",
+      authDomain: "projeto-teste-7dcf3.firebaseapp.com",
+      databaseURL: "https://projeto-teste-7dcf3.firebaseio.com",
+      projectId: "projeto-teste-7dcf3",
+      storageBucket: "projeto-teste-7dcf3.appspot.com",
+      messagingSenderId: "64536651121"
+    };
+    firebase.initializeApp(config);
+  </script>
+  
+  <script> 
+  
+    
+    var ref = firebase.database().ref();
+
+        var refUsuarios = ref.child('usuarios');
+
+        refUsuarios.push({
+            nome: "mercio",
+            idade: 29
+        });
+        
+        refUsuarios.push({
+            nome: "ingrid",
+            idade: 29
+        })
+  
+  </script>
+</body>
+</html>
