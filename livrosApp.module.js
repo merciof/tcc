@@ -6,4 +6,5 @@ angular.module('livrosApp', [
 'telaLogin',
 'cadastroUsuario',
 'cadastroAnuncio',
+'detalhesProduto',
 'ngRoute']);

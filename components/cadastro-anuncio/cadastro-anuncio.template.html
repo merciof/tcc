@@ -2,7 +2,21 @@
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
 
 <!-- Inline CSS based on choices in "Settings" tab -->
-<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: #ffffff !important;} .asteriskField{color: red;}
+<style>
+
+.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form {
+  font-family: Arial, Helvetica, sans-serif; 
+  color: black
+ }
+
+.bootstrap-iso form button, .bootstrap-iso form button:hover {
+  color: #ffffff !important;
+} 
+ 
+.asteriskField {
+   color: red;
+ }
+
 .centralizado {
   margin-left: 25%;
   margin-right: 25%;
@@ -14,90 +28,109 @@
 
 <!-- HTML Form (wrapped in a .bootstrap-iso div) -->
 <div class="bootstrap-iso">
+ 
  <div class="container">
   <div class="row">
    <div class="col-md-6 col-sm-6 centralizado">
+    
     <form method="post">
-     <div class="form-group ">
-      <label class="control-label requiredField" for="name">
-       T&iacute;tulo
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-      <input class="form-control" id="name" name="name" placeholder="Nome" type="text"/>
+     
+     
+     <div class="form-group"> 
+      
+      <!--rotulo 'Título' para a entrada (input) de id 'name' -->
+      <label class="control-label requiredField" for="titulo"> Título <span class="asteriskField"> * </span> </label>
+      
+      <!--campo para entrada do atributo 'titulo' do livro-->
+      <input class="form-control" id="titulo" ng-model="titulo" name="titulo" placeholder="Título" type="text"/>
+     
      </div>
+     
+     <div class="form-group">
+      
+      <!--rótulo 'Autor' para a input de id 'autor', a qual recebe como entrada o nome autor do livro a ser anunciado-->
+      <label class="control-label requiredField" for="autor"> Autor <span class="asteriskField"> * </span> </label>
+      
+      <input class="form-control" id="autor" ng-model="autor" name="autor" type="text"/>
+     
+     </div>
+
+     <div class="form-group">
+      
+      <label class="control-label" for="descricao"> Descrição </label>
+      
+      <textarea class="form-control" cols="40" id="descricao" ng-model="descricao" name="descricao-livro" rows="5"></textarea>
+      
+      <span class="help-block" id="hint_textarea"> Edição do livro,estado de conservação,etc </span>
+     
+     </div>
+
      <div class="form-group ">
-      <label class="control-label requiredField" for="name2">
-       Autor
-       <span class="asteriskField">
-        *
-       </span>
-      </label>
-      <input class="form-control" id="name2" name="name2" type="text"/>
+      
+      <label class="control-label " for="curso"> Curso </label>
+      
+      <input class="form-control" id="curso" ng-model="curso" name="curso" type="text" />
+     
      </div>
      
      <div class="form-group ">
-      <label class="control-label " for="textarea">
-       Descri&ccedil;&atilde;o
-      </label>
-      <textarea class="form-control" cols="40" id="textarea" name="textarea" rows="5"></textarea>
-      <span class="help-block" id="hint_textarea">
-       Edi&ccedil;&atilde;o do livro, estado de conserva&ccedil;&atilde;o, etc
-      </span>
+      
+      <label class="control-label " for="disciplina"> Disciplina </label>
+      
+      <input class="form-control" id="disciplina" ng-model="disciplina" name="disciplina" type="text" />
+     
      </div>
      
      <div class="form-group ">
-      <label class="control-label " for="name3">
-       Curso
-      </label>
-      <input class="form-control" id="name3" name="name3" type="text"/>
-     </div>
-     <div class="form-group ">
-      <label class="control-label " for="name4">
-       Disciplina
-      </label>
-      <input class="form-control" id="name4" name="name4" type="text"/>
-     </div>
-     <div class="form-group ">
-      <label class="control-label " for="select2">
-       Per&iacute;odo
-      </label>
-      <select class="select form-control" id="select2" name="select2">
-       <option value="First Choice">
-        First Choice
-       </option>
-       <option value="Second Choice">
-        Second Choice
-       </option>
-       <option value="Third Choice">
-        Third Choice
-       </option>
+      
+      <label class="control-label " for="periodo"> Período </label>
+      
+      <select class="select form-control" id="periodo" ng-model="periodo" name="periodo">
+       
+       <option value="First Choice"> First Choice </option>
+       <option value="Second Choice"> Second Choice </option>
+       <option value="Third Choice"> Third Choice</option>
+      
       </select>
      </div>
-     <div class="form-group ">
-      <label class="control-label " for="tel">
-       Telefone para contato
-      </label>
-      <input class="form-control" id="tel" name="tel" type="text"/>
-     </div>
-     <div class="form-group ">
-      <label class="control-label " for="name5">
-       Ponto para encontro
-      </label>
-      <input class="form-control" id="name5" name="name5" type="text"/>
-      <span class="help-block" id="hint_name5">
-       Pr&eacute;dio central, CEGOE, CEAGRI, etc
-      </span>
-     </div>
+     
      <div class="form-group">
-      <div>
-       <button class="btn btn-lg btn-dark" name="submit" type="submit">
-        Criar an&uacute;ncio
-       </button>
-      </div>
+      
+      <label class="control-label " for="telefone"> Telefone para contato </label>
+      
+      <input class="form-control" id="telefone" ng-model="telefone" name="telefone" type="text" />
+     
      </div>
+     
+     <div class="form-group">
+      
+      <label class="control-label " for="ponto-encontro"> Ponto para encontro </label>
+      
+      <input class="form-control" id="ponto-encontro" ng-model="ponto-encontro" name="ponto-para-encontro" type="text" />
+      
+      <span class="help-block" id="hint_name5"> Prédio central,CEGOE,CEAGRI,etc </span>
+     
+     </div>
+     
+     <div class="form-group ">
+      
+      <label class="control-label " for="url-imagem-livro"> Url de foto do livro  </label>
+      
+      <input class="form-control" id="url-imagem-livro" ng-model="url-imagem-livro" name="url-imagem-livro" type="text" />
+      <!--<span class="help-block" id="hint_name5"></span> -->
+     
+     </div>
+     
+     <div class="form-group">
+      
+      <!--botão do tipo submit para a sumição do formulário-->
+
+       <button class="btn btn-lg btn-dark" name="submit" type="submit"> Criar anúncio </button>
+
+     </div>
+    
     </form>
+   
    </div>
   </div>
  </div>

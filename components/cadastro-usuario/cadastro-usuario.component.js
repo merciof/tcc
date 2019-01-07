@@ -1,6 +1,6 @@
 angular.module('cadastroUsuario').component('cadastroUsuario', {
     templateUrl: 'components/cadastro-usuario/cadastro-usuario.template.html',
-    controller: function CadastroUsuarioController($scope, $log) {
+    controller: function CadastroUsuarioController($scope, $log, $location) {
         
         var ref = firebase.database().ref();
 
@@ -11,10 +11,12 @@ angular.module('cadastroUsuario').component('cadastroUsuario', {
             refUsuarios.push({
                 nome: $scope.nome,
                 email: $scope.email,
-                curso: $scope.periodo,
+                curso: $scope.curso,
                 periodo: $scope.periodo,
                 senha: $scope.senha
             });
+            
+            $location.path('/tela-login');
             
             window.alert('Cadastro realizado com sucesso!');
             
